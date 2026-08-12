@@ -1,4 +1,14 @@
 {
-  "$comment": "$ で始まるキーは注記。JSON にコメントが書けないため",
-  "guide": { "label": { "ja": "使いかた", "en": "Guide" }, "position": 1 }
+  "$comment": "$ で始まるキーは注記として読み飛ばされる（JSON にコメントが書けないため）",
+
+  "guide": {
+    "label": { "ja": "使いかた", "en": "Guide" },
+    "position": 1,
+    "collapsed": false
+  },
+
+  "reference": {
+    "label": { "ja": "リファレンス", "en": "Reference" },
+    "position": 2
+  }
 }
