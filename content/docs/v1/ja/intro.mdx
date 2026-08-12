@@ -4,16 +4,23 @@ description: リポジトリから取り込まれた記事です
 sidebar_position: 1
 ---
 
-# Demo Corp
-
 この記事は **GitHub のリポジトリから取り込まれました**。
 
 `nao50/techtoc-demo` の `content/docs/v1/ja/intro.mdx` を編集して push すると、
 techtoc 側に反映されます。
 
+:::note
+本文に `#` の見出しは書きません。frontmatter の `title` が h1 になるので、
+書くと h1 が 2 つ並びます。本文は `##` から始めます。
+:::
+
 ## 仕組み
 
-1. push を受け取る
+1. push を受け取る（署名を確かめる）
 2. tarball を落とす
 3. `content/demo/` に展開する
 4. ビルドし直す
+
+## 反映されないときは
+
+「リポジトリ」の画面に、最後の取り込みと失敗の理由が出ています。
