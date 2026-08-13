@@ -1,0 +1,17 @@
+---
+title: VLAN assignment
+description: Placing an authenticated device on a network
+sidebar_position: 2
+---
+
+Return **three attributes together** to place a device on a VLAN.
+
+| Attribute | Value |
+| --- | --- |
+| Tunnel-Type | VLAN |
+| Tunnel-Medium-Type | IEEE-802 |
+| Tunnel-Private-Group-ID | VLAN number |
+
+:::warning[All three are required]
+Missing one, most devices fall back to the default VLAN. Return the full set.
+:::

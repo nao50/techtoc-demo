@@ -1,0 +1,29 @@
+---
+title: VLAN の割り当て
+description: 認証が通った機器を、どのネットワークに入れるか
+sidebar_position: 2
+---
+
+認証が通ったとき、**3 つの属性を揃えて返す**と、機器を指定の VLAN に入れられます。
+
+| 属性 | 値 |
+| --- | --- |
+| Tunnel-Type | VLAN |
+| Tunnel-Medium-Type | IEEE-802 |
+| Tunnel-Private-Group-ID | VLAN 番号（`100` など） |
+
+:::warning[3 つ揃わないと効きません]
+1 つでも欠けると、多くの機器は既定の VLAN に落とします。3 つセットで返してください。
+:::
+
+## 場所ごとに変える
+
+同じ機器でも、つなぎに来た場所で VLAN を変えられます。
+
+```
+機器 A + 工場の AP   → VLAN 100（生産系）
+機器 A + 事務所の AP → VLAN 200（管理系）
+```
+
+判断の材料は [ネットワークの考え方](/demo/ja/docs/guide/networking/overview) で
+説明した「つなぎに来る場所」です。

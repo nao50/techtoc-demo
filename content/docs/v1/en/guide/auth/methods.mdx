@@ -1,0 +1,18 @@
+---
+title: Choosing an auth method
+description: Match the method to the device
+sidebar_position: 1
+---
+
+Real deployments mix devices. **Match the method to what each device can do.**
+
+| Method | Suited to |
+| --- | --- |
+| EAP-TLS | Devices that hold a certificate. Strongest |
+| EAP-SIM / AKA | SIM-equipped (cellular) |
+| PEAP / TTLS | Username and password |
+| MAB | MAC only. **Identification, not authentication** |
+
+:::warning[MAB is a last resort]
+A MAC address is claimed, never proven. Restrict its reach with VLANs or ACLs.
+:::

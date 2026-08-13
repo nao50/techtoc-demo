@@ -1,14 +1,29 @@
 {
-  "$comment": "$ で始まるキーは注記として読み飛ばされる（JSON にコメントが書けないため）",
+  "$comment": "区分の名前と並び順。$ で始まるキーは注記として読み飛ばされる。",
+  "$order": "トップの記事は sidebar_position 1〜2 を使うので、区分は 3 から始める。",
 
   "guide": {
-    "label": { "ja": "使いかた", "en": "Guide" },
-    "position": 1,
+    "label": { "ja": "ガイド", "en": "Guide" },
+    "position": 3,
     "collapsed": false
+  },
+  "guide/networking": {
+    "label": { "ja": "ネットワーク", "en": "Networking" },
+    "position": 1
+  },
+  "guide/auth": {
+    "label": { "ja": "認証方式", "en": "Authentication" },
+    "position": 2
   },
 
   "reference": {
     "label": { "ja": "リファレンス", "en": "Reference" },
-    "position": 2
+    "position": 4
+  },
+
+  "operations": {
+    "label": { "ja": "運用", "en": "Operations" },
+    "position": 5,
+    "collapsed": true
   }
 }

@@ -1,14 +1,24 @@
 ---
-title: 属性の一覧
-description: 返せる RADIUS 属性
+title: 返せる属性
+description: 認証が通ったときに返せる RADIUS 属性
 sidebar_position: 1
 ---
 
-返せる属性の一覧です。
+認証が通ったとき、機器の扱いを属性で指示します。
 
-## よく使うもの
+## VLAN
+
+| 属性 | 値 |
+| --- | --- |
+| Tunnel-Type | VLAN |
+| Tunnel-Medium-Type | IEEE-802 |
+| Tunnel-Private-Group-ID | VLAN 番号 |
+
+## 時間
 
 | 属性 | 意味 |
-|---|---|
-| Framed-IP-Address | 割り当てる IP |
-| Session-Timeout | 切るまでの秒数 |
+| --- | --- |
+| Session-Timeout | 秒。過ぎたら切る（再認証の間隔にもなる） |
+| Idle-Timeout | 秒。無通信がこれだけ続いたら切る |
+
+使い方は [VLAN の割り当て](/demo/ja/docs/guide/networking/vlan) を見てください。

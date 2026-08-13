@@ -1,0 +1,24 @@
+---
+title: 認証方式の選び方
+description: 機器に合わせて方式を選ぶ
+sidebar_position: 1
+---
+
+現場には、証明書を積める機器と積めない機器が混在します。**機器に合わせて
+方式を選びます。**
+
+| 方式 | 向いている機器 |
+| --- | --- |
+| EAP-TLS | 証明書を積める。いちばん強い |
+| EAP-SIM / AKA | SIM を持つ（携帯網） |
+| PEAP / TTLS | ID とパスワード |
+| PAP / CHAP | 古い機器 |
+| MAB | MAC しか出せない。**識別であって認証ではない** |
+
+:::warning[MAB は最後の手段です]
+MAC アドレスは名乗るだけで、証明できません。他が使えない機器のために残して
+ありますが、[VLAN](/demo/ja/docs/guide/networking/vlan) や ACL で行ける先を
+狭めて使ってください。
+:::
+
+証明書を使う場合は [証明書の配り方](/demo/ja/docs/guide/auth/certificates) へ。

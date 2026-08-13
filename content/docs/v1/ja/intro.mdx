@@ -1,26 +1,52 @@
 ---
 title: Demo Corp のドキュメント
-description: リポジトリから取り込まれた記事です
+description: GitHub のリポジトリから取り込まれた、階層のあるドキュメントの見本
 sidebar_position: 1
 ---
 
-この記事は **GitHub のリポジトリから取り込まれました**。
-
-`nao50/techtoc-demo` の `content/docs/v1/ja/intro.mdx` を編集して push すると、
-techtoc 側に反映されます。
+このサイトは **GitHub のリポジトリ（`nao50/techtoc-demo`）から取り込まれています**。
+`content/` の中を編集して `main` に push すると、techtoc が取り込んでサイトを
+作り直します。
 
 :::note
-本文に `#` の見出しは書きません。frontmatter の `title` が h1 になるので、
-書くと h1 が 2 つ並びます。本文は `##` から始めます。
+この頁は「取り込みの見本」です。**サイドナビの階層**（区分 → 小区分 → 記事）と、
+複数の collection（ドキュメント・ハンズオン）が、リポジトリのディレクトリから
+どう組み上がるかを見せています。
 :::
 
-## 仕組み
+## 何が置いてあるか
 
-1. push を受け取る（署名を確かめる）
-2. tarball を落とす
-3. `content/demo/` に展開する
-4. ビルドし直す
+| 区分 | 中身 |
+| --- | --- |
+| ガイド → ネットワーク | 接続の考え方と設定 |
+| ガイド → 認証方式 | 方式の選び方 |
+| リファレンス | 属性・エラーの一覧 |
+| 運用 | 監視とバックアップ（既定は畳んでいます） |
 
-## 反映されないときは
+## サイドナビの階層はどう決まるか
 
-「リポジトリ」の画面に、最後の取り込みと失敗の理由が出ています。
+ディレクトリがそのまま階層になります。区分の**名前と並び順**は
+`content/docs/v1/_structure.json` に書きます。
+
+```
+content/docs/v1/ja/
+  intro.mdx                    ← この頁
+  setup.mdx
+  guide/
+    networking/                ← 「ネットワーク」区分
+      overview.mdx
+      vlan.mdx
+    auth/                      ← 「認証方式」区分
+      methods.mdx
+      certificates.mdx
+  reference/
+    attributes.mdx
+  operations/
+    monitoring.mdx
+    backup.mdx
+```
+
+## 次に読むもの
+
+- [使いはじめる](/demo/ja/docs/setup)
+- [ネットワークの考え方](/demo/ja/docs/guide/networking/overview)

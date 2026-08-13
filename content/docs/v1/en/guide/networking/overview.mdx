@@ -1,0 +1,20 @@
+---
+title: Networking overview
+description: Where devices connect, and where they can go
+sidebar_position: 1
+---
+
+Split network design into two questions:
+
+1. **Where do devices connect** (access points, PGW)
+2. **Once authenticated, where can they go** (VLAN, ACL)
+
+## Where they can go
+
+After authentication, assign the device to a network. See
+[VLAN assignment](/demo/en/docs/guide/networking/vlan).
+
+:::note
+"Can it connect" and "where can it go" are separate decisions. Even if a
+device connects, keeping its reach narrow limits the damage if it is compromised.
+:::
